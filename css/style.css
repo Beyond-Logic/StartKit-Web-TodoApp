@@ -1,0 +1,826 @@
+html {
+    height: 100%;
+    
+
+}
+
+body {
+    
+    background: url("") no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    background-color: #4a4a4a;
+
+}
+
+
+#overlayer {
+  width:100%;
+  height:100%;  
+  position:absolute;
+  z-index:1;
+  background-color: #264653;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index:3;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+.badge {
+    color: #2a9d8f;
+}
+
+.about, .whatsnew {
+    font-size: 12px;
+    color: gray;
+}
+
+input {
+    color: #fff !important;
+}
+
+.todo-input {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #fff !important;
+}
+
+#settingsTabContent .tab-pane {
+    font-weight: 400 !important;
+}
+
+
+
+.about-message {
+    font-size: 15px;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.small-text a {
+    color: #fff;
+}
+
+.user-settings {
+    color: #fff !important;
+}
+
+.social-media a {
+    color: #fff !important;
+}
+
+.social-media a:hover {
+    color: gray !important;
+}
+.today  {
+    color: #fff;
+    font-size: 20px;
+}
+
+#clock {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 100px;
+    position: relative;
+    top: 40%;
+    margin-top: 8.0%;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 550;
+}
+
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+
+.inbox-header {
+    padding: 0;
+    position: relative;
+    margin-left: 160px;
+    margin-bottom: 25px;
+    color: #2a9d8f;
+
+}
+
+.divider {
+    width: 300px;
+    color: #fff;
+    border-bottom: 1px solid #fdfdfd;
+    margin-top: -20px;
+    margin-left: -45px;
+}
+
+nav {
+    height: 50px;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-position {
+
+    z-index: 3 !important;
+}
+
+
+#inbox {
+    padding: 25px 50px;
+    width: 320px;
+    margin-left: -150px;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    margin-right: 30px;
+}
+
+#inbox li {
+    padding-top: 3px;
+    padding-bottom: 8px;
+}
+
+
+
+.list {
+    list-style: none;
+    color: rgba(0,0,0, .8);
+}
+
+.list li {
+    width: 100%;
+    float: left;
+
+}
+
+label {
+    padding: 10px;
+    float: left;
+    width: 90%;
+}
+
+
+
+.preloader {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9999;
+   background-image: url('../images/tab-icon.png');
+   background-repeat: no-repeat; 
+   background-color: #FFF;
+   background-position: center;
+}
+
+
+.quote {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400px;
+    margin-top: 100px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+
+quote {
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+.author-name {
+    margin-top: 10px;
+    display: none;
+    font-weight: 500px;
+    font-size: 15px;
+}
+
+.twitter-share-button {
+    display: inline-block;
+}
+
+.quote:hover .author-name{
+    display: block;
+    
+    
+}
+
+
+#twittershare .fa-twitter {
+    color: lightgray !important;
+    font-size: 15px !important;
+}
+
+#twittershare .fa-twitter:hover {
+    color: #fff;
+}
+
+#twittershare {
+  margin-left: 8px;  
+}
+
+
+.todo {
+    float: left;
+    color: #fff;
+    list-style-type: none;
+    margin-right: 1%;
+    margin-top: 7px;
+    font-size: 20px;
+}
+
+.todo-number {
+    font-size: 15px;
+    color: #fff;
+}
+
+.fa-bell {
+    color: orangered;
+}
+
+.fa-book {
+    color: #fff;
+}
+
+.nav-item a {
+    color: #fff !important;
+}
+
+.nav-item {
+    float: right !important;
+}
+
+ul li {
+    list-style-type: none !important;
+}
+.settings {
+    float: left;
+    color: #fff;
+    font-size: 10px;
+
+
+
+}
+
+.settings a {
+    color: #fff !important;
+}
+
+
+
+.photoby {
+    float: right;
+    color: #fff;
+    font-size: 10px;
+
+}
+
+.photoby a {
+    color: #fff !important;
+}
+
+.nav-dark {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+
+.form-control {
+    width: 80%;
+    margin: 0 5%;
+    background-color: transparent !important;
+    border: 1px solid #fffcf9 !important;
+    color: #fff !important;
+    margin-top: 20px;
+}
+
+
+.form-control::placeholder {
+  color: #fff!important;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #fff !important;
+}
+
+.form-control::-ms-input-placeholder {
+color: #fff !important}
+
+
+.search-form {
+    text-align: center;
+    list-style-type: none;
+
+
+}
+
+button {
+    padding:5px;
+    top: -37px;
+    
+}
+
+
+
+.button-style {
+    border-radius: 10%;
+    font-family: cursive;
+    color: #fff;
+    background: rgba(0,0,0, 0.1);
+    border: none;
+    display: none;
+}
+
+.inbox-all {
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+.inbox-all:hover {
+    color: orangered;
+}
+
+.clear-inbox {
+    padding:0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    float: right;
+    position: none;
+    top: 5;
+    right: 0;
+}
+
+
+.scrollable-menu {
+    height: auto;
+    max-height: 358px;
+    overflow-x: hidden;
+
+}
+
+
+#inboxitems {
+    margin-top: 0px;
+}
+
+#completed-task {
+    margin-top: 0px;
+}
+
+.emptyinbox {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.todotab {
+    display: flex;
+}
+#inboxitems li {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  transition: 0.2s;
+  margin-left: -40px;
+  text-decoration: none !important;
+  color: #fff;
+}
+
+
+#inboxitems li:hover {
+  background: rgba(0,0,0, 0.5);
+  color: #fff;
+  text-decoration: none !important;  
+}
+
+#inboxitems li:hover::before {
+    content: '';
+    position: absolute;
+    border-color: #f4a261;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 4px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    margin-left: -20px;
+}
+
+#completed-task li {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 10px;
+  transition: 0.2s;
+  margin-left: -40px;
+}
+
+
+#completed-task li:hover {
+  background: rgba(0,0,0, 0.5);
+  color: #f1dca7;
+  
+}
+
+#completed-task li::before {
+    content: '';
+    position: absolute;
+    border-color: #f4a261;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 4px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+    margin-left: -20px;
+}
+
+
+.clearinbox-notice {
+    font-size: 12px;
+}
+
+
+#myTabContent .tab-pane {
+    font-weight: 400 !important;
+}
+
+
+
+.active { 
+    color: #fff;
+  font-weight: 500;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.checked {
+  background: none;
+  color: #fff;
+  text-decoration: line-through !important;
+}
+
+.done {
+    text-decoration: line-through !important;
+    color: #f1dca7;
+}
+
+.menu-display {
+display: block !important;
+overflow: hidden;
+}
+
+.menu-footer-display {
+display: block !important;
+overflow: hidden;
+}
+
+.menu-hide {
+    display: none !important;
+}
+#completed-task .checkbutton {
+    display: block !important;
+}
+
+#completed-task .clear-item {
+    display: block!important;
+}
+
+
+.checkbutton {
+  display: none;
+  position: absolute;
+  color: #fff;
+  margin-top: 52px;
+  left: 16px;
+  width: 0px;
+  height: 0px;
+  margin-left: -40px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: .25rem;
+}
+
+#inboxitems .checkbutton {
+    display: block !important;
+}
+
+#inboxitems .uncheckbutton {
+    display: none !important;
+}
+
+
+.uncheckbutton {
+  display: none;
+  position: absolute;
+  color: #fff;
+  margin-top: 52px;
+  left: 16px;
+  width: 0px;
+  height: 0px;
+  margin-left: -40px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: .25rem;
+}
+
+#completed-task .checkbutton {
+    display: none !important;
+}
+
+#completed-task .uncheckbutton {
+    display: block !important;
+}
+
+.recheckbutton {
+  display: none;
+  position: absolute;
+  color: #fff;
+  margin-top: 52px;
+  left: 16px;
+  width: 0px;
+  height: 0px;
+  margin-left: -40px;
+  border: 1px solid #fff;
+  background: transparent;
+  border-radius: .25rem;
+}
+
+#movedInbox .checkbutton {
+    display: none !important;
+}
+
+#movedInbox .uncheckbutton {
+    display: none !important;
+}
+
+#movedInbox .recheckbutton {
+    display: block !important;
+}
+
+#movedInbox .clear-item {
+    display: none !important;
+}
+
+#movedInbox .clear-transfer-item {
+    display: block !important;
+}
+
+
+pointer-events: none !important;
+
+
+.checkedbutton {
+    background-color: yellowgreen!important;
+    border: 1px solid yellowgreen;
+}
+
+
+.close {
+  margin-right: -80px;
+  color: #fff;
+  margin-top: 38px;
+}
+
+.list-hide {
+    display: none;
+}
+
+.user {
+    background: rgba(0,0,0, 0.7);
+    margin-bottom: 10px !important;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.ampm {
+    font-size: 15px;
+}
+.customize {
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    margin-left: -40px;
+    padding-top: 5px;
+}
+
+.customize-data {
+    color: #fff;
+    font-size: 10px;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: -10px;
+}
+
+.customize-data a {
+    color: #fff;
+}
+.username {
+    margin: 20px 13px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-top: -30px;
+    background: rgba(0,0,0, 0.1);
+
+}
+
+.dropup .dropdown-menu {
+    margin-bottom: -40px;
+}
+
+.username::placeholder {
+  color: #fff!important;
+}
+
+.username:-ms-input-placeholder {
+    color: #fff !important;
+}
+
+.username::-ms-input-placeholder {
+color: #fff !important}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-left: -30px;
+  width: 100%;
+  background-color: none;
+  color: #fff;
+  text-align: center;
+  padding: 0 3%;
+}
+
+
+.scrollbar {
+margin-left: 30px;
+float: left;
+height: auto;
+width: 65px;
+background: #fff;
+overflow-y: scroll;
+margin-bottom: 25px;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+width: 8px;
+background-color: #000; }
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+border-radius: 10px;
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+background-color: #fff;
+}
+
+.scrollbar-primary {
+scrollbar-color: #4285F4 #F5F5F5;
+}
+
+.completed-inboxitem {
+    display: none!important;
+}
+.clear-item {
+    position: absolute;
+    font-size: 20px;
+    margin-right: -20px;
+    color: #fff;
+    margin-top: 38px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    right: 0px;
+}
+
+.clear-item:hover{
+    color: #e63946;
+    padding: 0;
+    border: none;
+}
+
+.clear-transfer-item {
+position: absolute;
+    font-size: 20px;
+    margin-right: -20px;
+    color: #fff;
+    margin-top: 38px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    right: 0px;
+}
+
+.clear-transfer-item:hover{
+    color: #e63946;
+    padding: 0;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+ #welcome span{
+    display:none;
+
+}
+#welcome span:first-child{
+    display:inline-block;
+}
+
+
+ #greetings span{
+    display:none;
+
+}
+#greetings span:last-child{
+    display:inline-block;
+}
+
+@media (max-width:1300px) {
+  #inbox {
+    margin-left: -250px !important;
+  }
+}

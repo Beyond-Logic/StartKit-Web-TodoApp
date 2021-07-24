@@ -1,0 +1,19 @@
+{ 
+    
+    
+    "manifest_version": 2, 
+    "name": "StartKit", "description": "TodoList App", 
+    "version": "1", 
+    "author": "Edema",
+    "browser_action": {   "default_icon": 
+    "images/tab-icon.png",   "default_title": "StartKit" },
+    "chrome_url_overrides" : { "newtab": "index.html"},
+    "permissions": ["activeTab"]
+}
+
+
+
+
+
+            
+
