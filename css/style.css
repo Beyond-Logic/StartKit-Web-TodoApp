@@ -824,3 +824,17 @@ position: absolute;
     margin-left: -250px !important;
   }
 }
+
+@media (max-width:700px) {
+    #clock {
+        font-size: 80px !important;
+    }
+
+    .greeting {
+        font-size: 30px !important;
+    }
+
+    .quote {
+        font-size: 25px !important;
+    }
+  }
