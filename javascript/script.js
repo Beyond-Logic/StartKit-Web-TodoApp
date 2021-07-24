@@ -37,7 +37,7 @@ cloky()
             images[14] = "bg14.jpg";
 
             var imageDate = new Date();
-            var imageInterval = imageDate.getSeconds;
+            var imageInterval = imageDate.getDay;
 
     document.body.style.backgroundImage = "url("+"images/" + images[imageInterval] + ")";
 
