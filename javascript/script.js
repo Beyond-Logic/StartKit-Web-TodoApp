@@ -1,6 +1,6 @@
 var d, h, m, s, ampm, clock;
 
-function cloky(){
+function cloky() {
     d = new Date();
     h = d.getHours();
     m = d.getMinutes();
@@ -18,28 +18,43 @@ setTimeout(cloky, 1000);
 
 cloky()
 
+  var imgCount = 7;
+    var dir = 'images/';
+    var randomCount = Math.round(Math.random() * (imgCount - 1)) + 1;
+    var images = new Array
+            images[1] = "bg1.jpg",
+            images[2] = "bg2.jpg",
+            images[3] = "bg3.jpg",
+            images[4] = "bg4.jpg",
+            images[5] = "bg5.jpg",
+            images[6] = "bg6.jpg",
+            images[7] = "bg7.jpg",
+            images[8] = "bg8.jpg",
+            images[9] = "bg9.jpg",
+            images[10] = "bg10.jpg",
+            images[11] = "bg11.jpg",
+            images[12] = "bg12.jpg",
+            images[13] = "bg13.jpg",
+            images[14] = "bg14.jpg",
 
-            var images = new Array();
-            
-            images[1] = "bg1.jpg";
-            images[2] = "bg2.jpg";
-            images[3] = "bg3.jpg";
-            images[4] = "bg4.jpg";
-            images[5] = "bg5.jpg";
-            images[6] = "bg6.jpg";
-            images[7] = "bg7.jpg";
-            images[8] = "bg8.jpg";
-            images[9] = "bg9.jpg";
-            images[10] = "bg10.jpg";
-            images[11] = "bg11.jpg";
-            images[12] = "bg12.jpg";
-            images[13] = "bg13.jpg";
-            images[14] = "bg14.jpg";
+    document.body.style.backgroundImage = "url(" + dir + images[randomCount] + ")";
 
-            var imageDate = new Date();
-            var imageInterval = imageDate.getDay;
-
-    document.body.style.backgroundImage = "url("+"images/" + images[imageInterval] + ")";
+//    var dir = 'images/';
+//    var images = new Array();
+//            images[1] = "bg1.jpg";
+//            images[2] = "bg2.jpg";
+//            images[3] = "bg3.jpg";
+//            images[4] = "bg4.jpg";
+//            images[5] = "bg5.jpg";
+//            images[6] = "bg6.jpg";
+//            images[7] = "bg7.jpg";
+//
+//       
+//
+//    var imageDate = new Date();
+//    var imageInterval = imageDate.getHours();
+//    //        document.body.style.backgroundImage = "url("+"images/" + images[imageInterval] + ")";
+//            document.body.style.backgroundImage = 'url(' + dir + images[imageInterval] + ')';
 
     var randomquotes = new Array ();
     randomquotes[0] = '“If you cannot do great things, do small things in a great way.” <span class="author-name"> <span class="author-name">Napoleon Hill <a id="twittershare" target="_blank"><i class="fab fa-twitter"></i></a></span>';
@@ -171,7 +186,7 @@ cloky()
      randomquotes[127] = '“Never stop learning because life never stops teaching.” <span class="author-name">Unknown <a id="twittershare"><i class="fab fa-twitter"></i></a></span>';                       randomquotes[128] = '“If you’re the smartest person in the room, you’re in the wrong room.” <span class="author-name">Unknown <a id="twittershare"><i class="fab fa-twitter"></i></a></span>';          
      randomquotes[129] = '“To learn a language is to have one more window from which to look at the world.” <span class="author-name">Chinese Proverb <a id="twittershare"><i class="fab fa-twitter"></i></a></span>'; 
      var randomquoteDate = new Date();
-     var randomquoteInterval =randomquoteDate.getDay();
+     var randomquoteInterval = randomquoteDate.getHours();
 
 
 
@@ -240,51 +255,57 @@ document.getElementById('todos').addEventListener('submit', function(e) {
   
 })
 
-        
 for (var i=0; i < itemsArray.length; i++) {
         var id = itemsArray[i].id;
         var todoText = itemsArray[i].todo;
         inboxitems.innerHTML +=
-        '<li id="number" class="list-item">' +todoText+ '<span class="buttons"><button class="checkbutton" onclick="removeItem('+id+')"></button><button class="uncheckbutton move-item"></button><button class="recheckbutton transfer-item"></button><button class="clear-transfer-item" onclick="deletemoveItem('+id+')">&times;</button><button class="clear-item" onclick="deleteItem('+id+')">&times;</button></span></li>';
-        
+        '<li id="number" class="list-item">' +todoText+ '<span class="buttons"><button class="checkbutton" id="removeItem" itemid="'+id+'"></button><button class="uncheckbutton move-item"></button><button class="recheckbutton transfer-item"></button><button class="clear-transfer-item" id="deletemoveItem" itemid="'+id+'">&times;</button><button class="clear-item" id="deleteItem" itemid="'+id+'">&times;</button></span></li>';
+  
+    document.getElementById('deleteItem').addEventListener('click', deleteItem)
+    document.getElementById('removeItem').addEventListener('click', removeItem)
+    document.getElementById('deletemoveItem').addEventListener('click', deletemoveItem)
+
+
 }
-
-
-
-function removeItem(id) {
-      location.reload(); 
-    for (var i = 0; i < itemsArray.length;i++) {
+function deleteItem()  {
+        var id = this.getAttribute('itemid');
+           location.reload(); 
+        for (var i = 0; i < itemsArray.length;i++) {
             if (itemsArray[i].id == id) {
                 itemsArray.splice(i, 1);
                 break;
             }
         }
-    localStorage.setItem("Inbox", JSON.stringify(itemsArray)); 
-}
-
-function deletemoveItem(id) {
-      location.reload(); 
-    for (var i = 0; i < itemsArray.length;i++) {
-            if (itemsArray[i].id == id) {
-                itemsArray.splice(i, 1);
-                break;
-            }
-        }
-    localStorage.setItem("Inbox", JSON.stringify(itemsArray)); 
-}
-
-function deleteItem(id) {
-      location.reload(); 
-    for (var i = 0; i < itemsArray.length;i++) {
-            if (itemsArray[i].id == id) {
-                itemsArray.splice(i, 1);
-                break;
-            }
-        }
-    localStorage.setItem("Inbox", JSON.stringify(itemsArray)); 
+   localStorage.setItem("Inbox", JSON.stringify(itemsArray)); 
    document.getElementById('inboxitems').innerHTML = ""; 
+  
+}        
 
+function removeItem() {
+    var id = this.getAttribute('itemid');
+      location.reload(); 
+    for (var i = 0; i < itemsArray.length;i++) {
+            if (itemsArray[i].id == id) {
+                itemsArray.splice(i, 1);
+                break;
+            }
+        }
+    localStorage.setItem("Inbox", JSON.stringify(itemsArray)); 
 }
+
+function deletemoveItem() {
+    var id = this.getAttribute('itemid'); 
+      location.reload(); 
+    for (var i = 0; i < itemsArray.length;i++) {
+            if (itemsArray[i].id == id) {
+                itemsArray.splice(i, 1);
+                break;
+            }
+        }
+    localStorage.setItem("Inbox", JSON.stringify(itemsArray)); 
+}
+
+
 
 $('.checkbutton').click(function (e) {
        location.reload(); 
@@ -312,12 +333,14 @@ $('.uncheckbutton').click(function (e) {
     })
 
 $('.move-item').click(function (e) {
+    location.reload(); 
     $(this).closest('li').remove('li');
     var completedItem = $('#completed-task').html();
     localStorage.setItem('CompletedTask', completedItem);     
     })
 
 $('.clear-item').click(function (e) {
+    location.reload(); 
     $(this).closest('li').remove('li');
     var completedItem = $('#completed-task').html();
     localStorage.setItem('CompletedTask', completedItem);     
@@ -333,6 +356,7 @@ $('.recheckbutton').click(function (e) {
     })
 
 $('.transfer-item').click(function (e) {
+    location.reload();
     $(this).closest('li').remove('li');
     var InboxItems = $('#movedInbox').html();
     localStorage.setItem('InboxItems', InboxItems);   
