@@ -18,7 +18,7 @@ setTimeout(cloky, 1000);
 
 cloky()
 
-  var imgCount = 7;
+  var imgCount = 14;
     var dir = 'images/';
     var randomCount = Math.round(Math.random() * (imgCount - 1)) + 1;
     var images = new Array
